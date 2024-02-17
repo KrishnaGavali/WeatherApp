@@ -2,7 +2,9 @@ import React from "react";
 
 export default function Solution() {
   return (
-    <div className="h-[450px] w-[85vw] bg-white bg-opacity-50 rounded-3xl shadow-[10px_10px_30px_-2px] mx-auto my-14">
+    <div>
+      <>
+      <div className="h-[450px] w-[85vw] bg-white bg-opacity-50 rounded-3xl shadow-[10px_10px_30px_-2px] mx-auto my-14">
       <div
         className=" w-[42.5vw] h-[450px]  float-left rounded-l-3xl text-center"
         id="subCom1"
@@ -20,28 +22,70 @@ export default function Solution() {
         </div>
         <div className=" flex justify-center items-center my-2" id="Astro">
           <div className="my-3 mb-6 font-light text-white AstroItems">
-            <span>Sunrise</span>
+            <span >
+              SunRise
+            </span>
             <br />
-            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" className="AstroIcons" alt="" />
-            <span>05:10 AM</span>
+
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/sunrise.png"
+              className="AstroIcons"
+              alt="sunrise"
+            />
+
+            <span className="bg-white text-black rounded-full px-2">
+              05:10 AM
+            </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
-            <span>Sunset</span>
+            <span>
+              SunSet
+            </span>
             <br />
-            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" className="AstroIcons" alt="" />
-            <span>09:03 PM</span>
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/sunset.png"
+              className="AstroIcons"
+              alt="sunset"
+            />
+            <span className="bg-white text-black rounded-full px-2">
+              09:03 PM
+            </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
-            <span>MoonRise</span>
+            <span >
+              MoonRise
+            </span>
             <br />
-            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" className="AstroIcons" alt="" />
-            <span>12:29 AM</span>
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/moonrise.png"
+              className="AstroIcons"
+              alt="moonrise"
+            />
+            <span className="bg-white text-black rounded-full px-2">
+              12:29 AM
+            </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
-            <span>MoonSet</span>
+            <span >
+              MoonSet
+            </span>
             <br />
-            <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" className="AstroIcons" alt="" /> 
-            <span>04:01 PM</span>
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/moonset.png"
+              className="AstroIcons"
+              alt="moonset"
+            />
+            <span className="bg-white text-black rounded-full px-2">
+              04:01 PM
+            </span>
           </div>
         </div>
       </div>
@@ -52,5 +96,11 @@ export default function Solution() {
         This is sub Components 2
       </div>
     </div>
+    <div className="">
+      
+    </div>
+      </>
+    </div>
+    
   );
 }

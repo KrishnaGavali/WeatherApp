@@ -5,9 +5,7 @@ export default function SearchBar() {
     <div
       className="p-2"
       style={{
-        background: "rgb(255,182,93)",
-        backgroundImage:
-          "linear-gradient(180deg, rgba(255,182,93,1) 0%, rgba(255,88,0,1) 100%)",
+        
       }}
     >
       <div className="text-center">

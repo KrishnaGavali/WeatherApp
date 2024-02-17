@@ -28,7 +28,7 @@ export default function SearchBar() {
             type="text"
             name="City Search"
             id="SearchBar"
-            className=" p-3 mx-1 text-center rounded border-2 border-solid border-black w-[550px]"
+            className=" p-3 mx-1 text-center rounded-full border-2 border-solid border-black w-[550px]"
             placeholder="SEARCH FOR CITY .."
           />
           <button className="p-3 px-6 border border-black border-solid rounded-md bg-blue-700 text-white mx-[16px] hover:bg-blue-500 transition-all "> 

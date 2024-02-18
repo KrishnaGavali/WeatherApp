@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Solution() {
+export default function Solution({city , TempC , feels, conditionIcon , conditionText, sunrise, sunset , moonrise,moonset}) {
   return (
     <div>
       <>
@@ -9,16 +9,16 @@ export default function Solution() {
         className=" w-[42.5vw] h-[450px]  float-left rounded-l-3xl text-center"
         id="subCom1"
       >
-        <p className=" my-5 text-4xl text-white font-light">Pune</p>
-        <p className=" text-8xl text-white">25 °C</p>
-        <p className=" my-3 mb-6 font-light text-white">Feels like 24 °C</p>
+        <p className=" my-5 text-4xl text-white font-light">{city}</p>
+        <p className=" text-8xl text-white">{TempC}°C</p>
+        <p className=" my-3 mb-6 font-light text-white">Feels like {feels} °C</p>
         <div className="inline border border-solid border-white p-5 bg-white rounded-full shadow-[0px_0px_15px_3px_white]">
           <img
-            src="//cdn.weatherapi.com/weather/64x64/day/116.png"
+            src={conditionIcon}
             className=" inline"
             alt=""
           />
-          <span className=" my-3 font-light text-black text-2xl">Sunny</span>
+          <span className=" my-3 font-light text-black text-2xl">{conditionText}</span>
         </div>
         <div className=" flex justify-center items-center my-2" id="Astro">
           <div className="my-3 mb-6 font-light text-white AstroItems">
@@ -36,7 +36,7 @@ export default function Solution() {
             />
 
             <span className="bg-white text-black rounded-full px-2">
-              05:10 AM
+              {sunrise}
             </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
@@ -52,7 +52,7 @@ export default function Solution() {
               alt="sunset"
             />
             <span className="bg-white text-black rounded-full px-2">
-              09:03 PM
+            {sunset}
             </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
@@ -68,7 +68,7 @@ export default function Solution() {
               alt="moonrise"
             />
             <span className="bg-white text-black rounded-full px-2">
-              12:29 AM
+              {moonrise}
             </span>
           </div>
           <div className="my-3 mb-6 font-light text-white AstroItems">
@@ -84,7 +84,7 @@ export default function Solution() {
               alt="moonset"
             />
             <span className="bg-white text-black rounded-full px-2">
-              04:01 PM
+              {moonset}
             </span>
           </div>
         </div>

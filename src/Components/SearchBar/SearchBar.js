@@ -11,6 +11,12 @@ export default function SearchBar() {
   const [sunSet, setSunSet] = useState("___");
   const [moonRise, setMoonRise] = useState("___");
   const [moonSet, setMoonSet] = useState("___");
+  const [visible, setVisible] = useState("__");
+  const [UV , setUV] = useState("__");
+  const [cloud , setCloud] = useState("__");
+  const [precip , setPricip] = useState("__");
+  const [windspeed , setWindSpeed] = useState("__");
+  const [humi , setHumi] = useState("__");
 
   // feelsL Like, condition, condition icon , sunrise , sunset , moonrise, moonset
 
@@ -55,9 +61,18 @@ export default function SearchBar() {
     console.log(astrourl);
 
     setSunrise(astroData.astronomy.astro.sunrise);
-    setSunSet(astroData.astronomy.astro.sunset)
-    setMoonRise(astroData.astronomy.astro.moonrise)
-    setMoonSet(astroData.astronomy.astro.moonset)
+    setSunSet(astroData.astronomy.astro.sunset);
+    setMoonRise(astroData.astronomy.astro.moonrise);
+    setMoonSet(astroData.astronomy.astro.moonset);
+
+    setVisible(data.current.vis_km);
+    setUV(data.current.uv);
+    setCloud(data.current.cloud);
+    setPricip(data.current.precip_mm)
+    setWindSpeed(data.current.wind_kph)
+    setHumi(data.current.humidity)
+   
+    
   };
 
   return (
@@ -66,14 +81,14 @@ export default function SearchBar() {
         <div className="text-center">
           <div className=" mt-3">
             <h3
-              className=" inline text-white font-semibold mx-10 py-1 border-b-4 rounded"
-              id="navitems1"
+              className=" inline text-white font-semibold mx-10 py-1 border-b-4 rounded navitemsRespo]"
+              id="navitems"
             >
               Real Time Weather
             </h3>
             <h3
-              className=" inline text-white font-semibold mx-10 py-1 hover:border-b-4 transition-all rounded"
-              id="navitems2"
+              className=" inline text-white font-semibold mx-10 py-1 hover:border-b-4 transition-all rounded  "
+              id="navitems"
             >
               Forecast Weather
             </h3>
@@ -83,11 +98,11 @@ export default function SearchBar() {
               type="text"
               name="City Search"
               id="SearchBar"
-              className=" p-3 mx-1 text-center rounded-full border-2 border-solid border-black w-[550px]"
+              className=" p-3 mx-1 text-center rounded-full  w-[550px] bg-white bg-opacity-50 min-[320px]:w-[90vw] max-[600px]:w-[90vw]"
               placeholder="SEARCH FOR CITY .."
             />
             <button
-              className="p-3 px-6 border border-black border-solid rounded-md bg-blue-700 text-white mx-[16px] hover:bg-blue-500 transition-all "
+              className="p-3 min-[320px]:m-2 max-[600px]:m-2 px-6 border border-black border-solid rounded-md bg-blue-700  text-white mx-[16px] hover:bg-blue-500 transition-all "
               onClick={dataDistribution}
             >
               Search
@@ -105,6 +120,12 @@ export default function SearchBar() {
         sunset={sunSet}
         moonrise={moonRise}
         moonset={moonSet}
+        visibility={visible}
+        ultraviotlet={UV}
+        cloudPercent={cloud}
+        precipitation={precip}
+        wind={windspeed}
+        humidity={humi}
       />
     </div>
   );

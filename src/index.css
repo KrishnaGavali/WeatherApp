@@ -19,3 +19,16 @@ body {
 .AstroIcons{
   margin: auto;
 }
+@media only screen and (max-width: 450px) and (min-width: 320px) {
+  #navitems {
+    font-size: 2.7vw;
+    
+  }
+
+  #AstroItems{
+    font-size: 4vw;
+  }
+ 
+
+
+}

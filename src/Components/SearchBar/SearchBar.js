@@ -18,9 +18,13 @@ export default function SearchBar() {
   const [windspeed , setWindSpeed] = useState("__");
   const [humi , setHumi] = useState("__");
 
+  const [isLoading , setLoading] = useState(false);
+
   // feelsL Like, condition, condition icon , sunrise , sunset , moonrise, moonset
 
   let dataDistribution = async () => {
+
+    setLoading(true)
     // Create a new Date object representing the current date
     const currentDate = new Date();
 
@@ -71,6 +75,8 @@ export default function SearchBar() {
     setPricip(data.current.precip_mm)
     setWindSpeed(data.current.wind_kph)
     setHumi(data.current.humidity)
+
+    setLoading(false)
    
     
   };
@@ -98,11 +104,11 @@ export default function SearchBar() {
               type="text"
               name="City Search"
               id="SearchBar"
-              className=" p-3 mx-1 text-center rounded-full  w-[550px] bg-white bg-opacity-50 min-[320px]:w-[90vw] max-[600px]:w-[90vw]"
+              className=" p-3 mx-1 text-center rounded-full  w-[550px] bg-white bg-opacity-50 shadow-[10px_10px_30px_-2px] min-[320px]:w-[90vw] max-[600px]:w-[90vw]"
               placeholder="SEARCH FOR CITY .."
             />
             <button
-              className="p-3 min-[320px]:m-2 max-[600px]:m-2 px-6 border border-black border-solid rounded-md bg-blue-700  text-white mx-[16px] hover:bg-blue-500 transition-all "
+              className="p-3 min-[320px]:m-2 max-[600px]:m-2 px-6 border border-black border-solid rounded-md bg-blue-700 shadow-[5px_5px_10px_0px_#1d4ed8]  text-white mx-[16px] hover:bg-blue-500 transition-all "
               onClick={dataDistribution}
             >
               Search
@@ -126,6 +132,7 @@ export default function SearchBar() {
         precipitation={precip}
         wind={windspeed}
         humidity={humi}
+        loading={isLoading}
       />
     </div>
   );

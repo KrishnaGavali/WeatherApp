@@ -11,14 +11,27 @@ export default function Solution({
   moonrise,
   moonset,
   visibility,
-  ultraviotlet,
+  ultraviolet,
   cloudPercent,
   precipitation,
   wind,
   humidity,
+  loading,
 }) {
+  let solutionDivStyle = {};
+
+  if (loading) {
+    solutionDivStyle = {
+      opacity : "0"
+    };
+  } else {
+    solutionDivStyle = {
+      opacity : "100"
+    };
+  }
+
   return (
-    <div>
+    <div id="solutionDiv" className=" transition-all duration-500 ease-in-out" style={solutionDivStyle}>
       <>
         <div
           className="h-[450px] w-[85vw] bg-white bg-opacity-50 rounded-3xl shadow-[10px_10px_30px_-2px] mx-auto my-14"
@@ -40,7 +53,7 @@ export default function Solution({
               </span>
             </div>
             <div className=" flex justify-center items-center my-2" id="Astro">
-              <div className="my-3 mb-6 font-light text-white AstroItems" id="AstroItems">
+              <div className="my-3 mb-6 font-light text-white AstroItems">
                 <span>SunRise</span>
                 <br />
 
@@ -56,7 +69,7 @@ export default function Solution({
                   {sunrise}
                 </span>
               </div>
-              <div className="my-3 mb-6 font-light text-white AstroItems" id="AstroItems">
+              <div className="my-3 mb-6 font-light text-white AstroItems">
                 <span>SunSet</span>
                 <br />
                 <img
@@ -70,7 +83,7 @@ export default function Solution({
                   {sunset}
                 </span>
               </div>
-              <div className="my-3 mb-6 font-light text-white AstroItems" id="AstroItems">
+              <div className="my-3 mb-6 font-light text-white AstroItems">
                 <span>MoonRise</span>
                 <br />
                 <img
@@ -84,7 +97,7 @@ export default function Solution({
                   {moonrise}
                 </span>
               </div>
-              <div className="my-3 mb-6 font-light text-white AstroItems" id="AstroItems">
+              <div className="my-3 mb-6 font-light text-white AstroItems">
                 <span>MoonSet</span>
                 <br />
                 <img
